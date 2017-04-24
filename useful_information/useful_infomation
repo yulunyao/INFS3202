@@ -1,6 +1,9 @@
-The Website and Database deployed on Azure.
 To look at the database structure and table data, download [MySQL Workbench]:
   1. Host:  au-cdbr-azure-east-a.cloudapp.net:3306
   2. username:  b622a8e03ec7ba
   3. password:  6e32c3d6
   4. database name: sik
+
+To access the website:
+  1. Type in http://infs3202-sik.azurewebsites.net/loginform.php in browser.
+  2. The website always syncing with GitHub, so any changes made in GitHub will be sent to the link above.
