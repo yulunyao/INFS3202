@@ -33,7 +33,7 @@ h6 {
     padding: 70px;
     margin: auto;
     border: 2px black solid;
-    background-color: black;
+    background-color: blue;
 }
 
 *,:after,:before{box-sizing:border-box}
