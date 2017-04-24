@@ -1,5 +1,6 @@
 The Website and Database deployed on Azure.
-For database remote access, you could download [MySQL Workbench]:
+To look at the database structure and table data, download [MySQL Workbench]:
   1. Host:  au-cdbr-azure-east-a.cloudapp.net:3306
   2. username:  b622a8e03ec7ba
   3. password:  6e32c3d6
+  4. database name: sik
