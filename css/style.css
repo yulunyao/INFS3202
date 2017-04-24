@@ -33,7 +33,7 @@ h6 {
     padding: 70px;
     margin: auto;
     border: 2px black solid;
-    background-image: url("https://cdn.pixabay.com/photo/2014/05/15/22/44/paint-345296_960_720.jpg");
+    background-color: black;
 }
 
 *,:after,:before{box-sizing:border-box}
