@@ -1,36 +1,28 @@
 <?php
-include('connectMySQL.php'); //make sure the path is correct.
+    include("connectMySQL.php");
+    $myemail = "s4380253";
+    $mypass = "test";
 
-$username = 'Admin';
-$password = 'gf45_gdf#4hg';
+/*    include('connectMySQL.php'); //make sure the path is correct.
+    $db = new MySQLDatabase(); //create a Database object
+    $db->connect("root", "", "sik");
+    $db->disconnect(); //always disconnect when finished.*/
 
-$db = new MySQLDatabase(); //create a Database object
-$db->connect("root", "", "sik");
-
-$query = "SELECT password FROM signup WHERE username = '$username'";
-$result = mysqli_query($db->link,$query);
-if(!$result){
-    die(mysqli_error());
-}
-$hash = mysql_result($result, 0);
-
-// Hashing the password with its hash as the salt returns the same hash
-if ( hash_equals($hash, crypt($password, $hash)) ) {
-  // Ok!
-}
-
-
-$db->disconnect(); //always disconnect when finished.
-/**
- * Created by PhpStorm.
- * User: WHOAMI
- * Date: 4/23/2017
- * Time: 3:54 PM
- */
-if($_REQUEST['username'] == "infs" && $_REQUEST["password"] == "3202") {
-    header("Location: task.php");
-}
-else{
-    header("Location: loginform.php");
-}
+    if(isset($_REQUEST['login'])) {
+        $username = $_REQUEST['username'];
+        $password = $_REQUEST['password'];
+        if ($username == $myemail and $password == $mypass) {
+            if(isset($_REQUEST['rem'])) {
+                setcookie('username', $username, time()+60*60*7);
+                setcookie('password', $password, time()+60*60*7);
+            }
+            session_start();
+            $_SESSION['username'] = $username;
+            header("location: task.php");
+        } else {
+            echo "Invalid Email/Password";
+        }
+    } else {
+        header("location: loginform.php");
+    }
 ?>
