@@ -79,7 +79,6 @@
     </div>
 
     <?php
-    session_start();
     include("connectMySQL.php");
 
     if(isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
