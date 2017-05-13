@@ -1,29 +1,3 @@
-<?php
-
-class MySQLDatabase
-{
-    var $link;
-
-    function connect($user, $password, $database)
-    {
-        $this->link = mysqli_connect('localhost', $user, $password);
-        if (!$this->link) {
-            die('Not connected : ' . mysqli_error());
-        }
-        $db = mysqli_select_db($this->link, $database);
-        if (!$db) {
-            die ('Cannot use : ' . mysqli_error());
-        }
-        return $this->link;
-    }
-
-    function disconnect()
-    {
-        mysqli_close($this->link);
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +29,11 @@ class MySQLDatabase
                                 <input id="pass" type="password" class="input" data-type="password" name="password">
                             </div>
                             <div class="group">
-                                <input id="check" type="checkbox" class="check" checked>
+                                <input id="check" type="checkbox" class="check" checked name="rem">
                                 <label for="check"><span class="icon"></span> Keep me Signed in</label>
                             </div>
                             <div class="group">
-                                <input type="submit" class="button" value="Sign In">
+                                <input type="submit" class="button" value="Sign In" name="login">
                             </div>
                             <div class="hr"></div>
                             <div class="foot-lnk">
@@ -103,5 +77,23 @@ class MySQLDatabase
             Designed By Team.
         </div>
     </div>
+
+    <?php
+    session_start();
+    include("connectMySQL.php");
+
+    if(isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
+        $username = $_COOKIE['username'];
+        $password = $_COOKIE['password'];
+        echo " <script>
+             document.getElementById('email').value = '$username';
+             document.getElementById('pass').value = '$password';
+    </script>";
+    }
+
+    $db = new MySQLDatabase(); //create a Database object
+    $db->connect("b622a8e03ec7ba", "6e32c3d6", "sik");
+
+    ?>
 </body>
 </html>
