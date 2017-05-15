@@ -34,7 +34,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 	
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=mapInit></script>
 
 
 	<script>
@@ -86,7 +86,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					map: map
 				  });
 				  var textString = document.getElementById("addressA")
-				  textString.innerText(results[1].formatted_address);
+				  //textString.innerText(results[1].formatted_address);
 				  //infowindow.open(map, marker);
 				} else {
 				  window.alert('No results found');
