@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SiK</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styleTask.css">
 </head>
 
 <body>
@@ -21,11 +21,11 @@
     <div class="mainArea">
         <div style="width: 100%;">
             <div style="float:left;">
-                <img src="img/blue.png"></img>
+                <img src="img/red.png"></img>
                 <h2><a href="home.php"> Find Friends</a></h2>
             </div>
             <div style="float:right;">
-                <img src="img/red.png"></img>
+                <img src="img/blue.png"></img>
                 <h2><a href="location.php"> Send Your Location</a></h2>
             </div>
         </div>
