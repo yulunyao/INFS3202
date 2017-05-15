@@ -15,7 +15,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 <div id="googleMap" style="width:100%;height:400px;"></div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0"></script>
 
 
 <script>
@@ -41,10 +41,10 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		longi = position.coords.longitude;
 		console.log(lat);
 		console.log(longi);
-		mapUpdate();
+		mapInit();
     }
 	
-	function myMap() {
+	/*function myMap() {
 		var mapProp= {
 			center:new google.maps.LatLng(lat,longi),
 			zoom:15,
@@ -52,14 +52,17 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 		//geocoder = new google.maps.Geocoder;
 		//infowindow = new google.maps.InfoWindow;
-	}
+	}*/
 	
-	function mapUpdate() {
+	function mapInit() {
 		var mapProp= {
 			center:new google.maps.LatLng(lat,longi),
 			zoom:15,
 		};
 		map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		geocoder = new google.maps.Geocoder;
+		infowindow = new google.maps.InfoWindow;
+		geoLookup();
 	}
 	
 	
