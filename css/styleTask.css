@@ -214,7 +214,11 @@ a{color:inherit;text-decoration:none}
     font-style: normal;
 }
 
-.locationBtn {
+#locationBtn {
 	text-align: center;
 	
+}
+
+#right{
+	text-align: center;
 }

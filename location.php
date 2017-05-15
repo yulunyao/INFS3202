@@ -19,10 +19,10 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
-	<div style="width: 50%; height: 100%; float:right ">
+	<div id=right style="width: 50%; height: 100%; float:right ">
 		<h3>You are now in the location:</h2>
 		<img src="img/blue.png"  width="50%" height="50%"></img>
-		<h2 id=addressA>Current Location String</h2>
+		<h2 id=addressA></h2>
 		<button id=locationBtn>Send Location</button>
 	</div>
 
