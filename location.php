@@ -22,7 +22,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	
 	<div style="width: 100%;">
             <div style="float:left;">
-                <div id="googleMap" style="width:100%;height:400px;"></div>
+                <div id="googleMap" style="width:60%;height:400px;"></div>
             </div>
             <div style="float:right;">
 				<h3>You are now in the location:</h2>
@@ -32,9 +32,9 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
             </div>
 	</div>
 
-	
+	<p></p>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=mapInit"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0"></script>
 
 
 	<script>
@@ -69,9 +69,9 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				zoom:15,
 			};
 			map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-			geocoder = new google.maps.Geocoder;
-			infowindow = new google.maps.InfoWindow;
-			geoLookup();
+			//geocoder = new google.maps.Geocoder;
+			//infowindow = new google.maps.InfoWindow;
+			//geoLookup();
 		}
 		
 		
