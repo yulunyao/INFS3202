@@ -50,8 +50,8 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			zoom:15,
 		};
 		map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		geocoder = new google.maps.Geocoder;
-		infowindow = new google.maps.InfoWindow;
+		//geocoder = new google.maps.Geocoder;
+		//infowindow = new google.maps.InfoWindow;
 	}
 	
 	function mapUpdate() {
