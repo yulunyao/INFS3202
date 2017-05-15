@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SiK</title>
-    <link rel="stylesheet" type="text/css" href="css/styleTask.css">
+    <link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
 
@@ -73,7 +73,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			{
 				var link = links[cl];
 				if (link.rel === "stylesheet")
-					link.href += "";
+					link.href = "css/styleTask.css";
 			}
 			geocoder = new google.maps.Geocoder;
 			infowindow = new google.maps.InfoWindow;
@@ -91,7 +91,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					position: latlng,
 					map: map
 				  });
-				  document.getElementById("addressA").innerText(results[1].formatted_address);
+				  document.getElementById("addressA").innerHTML(results[1].formatted_address);
 				  //textString
 				  //infowindow.open(map, marker);
 				} else {
