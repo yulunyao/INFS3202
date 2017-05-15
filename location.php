@@ -30,11 +30,11 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
                 <h2 id=addressA>Current Location String</h2>
 				<button id=locationBtn>Send Location</button>
             </div>
-        </div>
+	</div>
 
 	
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=mapInit></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=mapInit"></script>
 
 
 	<script>
