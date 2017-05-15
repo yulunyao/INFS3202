@@ -20,16 +20,14 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 	<p id="demo"></p>
 	
-	<div style="width: 100%; height = 100%">
-            <div style="float:left; width: 50%; height = 100%">
-                <div id="googleMap" style="width:60%;height:400px;"></div>
-            </div>
-            <div style="float:right;">
-				<h3>You are now in the location:</h2>
-                <img src="img/blue.png"  width="50%" height="50%"></img>
-                <h2 id=addressA>Current Location String</h2>
-				<button id=locationBtn>Send Location</button>
-            </div>
+	<div style="float:left; width: 50%; height = 100%">
+		<div id="googleMap" style="width:80%;height:400px;"></div>
+	</div>
+	<div style="float:right;">
+		<h3>You are now in the location:</h2>
+		<img src="img/blue.png"  width="50%" height="50%"></img>
+		<h2 id=addressA>Current Location String</h2>
+		<button id=locationBtn>Send Location</button>
 	</div>
 
 	<p></p>
