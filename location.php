@@ -67,9 +67,17 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				zoom:15,
 			};
 			map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-			//geocoder = new google.maps.Geocoder;
-			//infowindow = new google.maps.InfoWindow;
-			//geoLookup();
+			
+			var links = document.getElementsByTagName("link");
+			for (var cl in links)
+			{
+				var link = links[cl];
+				if (link.rel === "stylesheet")
+					link.href += "";
+			}
+			geocoder = new google.maps.Geocoder;
+			infowindow = new google.maps.InfoWindow;
+			geoLookup();
 		}
 		
 		
@@ -83,8 +91,8 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					position: latlng,
 					map: map
 				  });
-				  var textString = document.getElementById("addressA")
-				  //textString.innerText(results[1].formatted_address);
+				  document.getElementById("addressA").innerText(results[1].formatted_address);
+				  //textString
 				  //infowindow.open(map, marker);
 				} else {
 				  window.alert('No results found');
