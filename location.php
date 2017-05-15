@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SiK</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styleTask.css">
 </head>
 <body>
 
@@ -26,7 +26,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
             </div>
             <div style="float:right;">
 				<h3>You are now in the location:</h2>
-                <img src="img/blue.png"></img>
+                <img src="img/blue.png"  width="50%" height="50%"></img>
                 <h2 id=addressA>Current Location String</h2>
 				<button id=locationBtn>Send Location</button>
             </div>
@@ -86,7 +86,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					map: map
 				  });
 				  var textString = document.getElementById("addressA")
-				  textString.setContent(results[1].formatted_address);
+				  textString.innerText(results[1].formatted_address);
 				  //infowindow.open(map, marker);
 				} else {
 				  window.alert('No results found');
