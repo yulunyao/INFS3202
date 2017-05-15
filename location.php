@@ -14,6 +14,8 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 <div id="wrapper">
 	<div class="logo"><img src="img/SiKd.png" alt="Logo" width="70px" height="32px"></div>
 	
+	<p id="demo"></p>
+	
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
@@ -50,8 +52,8 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		}
 
 		function showPosition(position) {
-			x.innerHTML = "Latitude: " + position.coords.latitude +
-				"<br>Longitude: " + position.coords.longitude;
+			/*x.innerHTML = "Latitude: " + position.coords.latitude +
+				"<br>Longitude: " + position.coords.longitude;*/
 			lat = position.coords.latitude;
 			longi = position.coords.longitude;
 			console.log(lat);
