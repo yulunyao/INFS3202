@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SiK</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-
+<html>
 <body>
-    <div id="wrapper">
-        <div class="logo"><img src="img/SiKd.png" alt="Logo" width="70px" height="32px"></div>
-        <h6>Find Your Friends At Anytime</h6>
-        
-		<div class="mainArea">
-			<div class="map"> </div>
-		</div>
 
-        <div id="footer">
-            Designed By Team.
-        </div>
-    </div>
+<!--
+AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
+-->
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
 </body>
 </html>
