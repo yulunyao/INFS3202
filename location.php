@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SiK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
 
 <!--
@@ -90,6 +95,10 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	
 	//var json = https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 </script>
+
+<div id="footer">
+            Designed By Team.
+</div>
 
 </body>
 </html>
