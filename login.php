@@ -16,9 +16,11 @@ $hash = mysql_result($result, 0);
 
 // Hashing the password with its hash as the salt returns the same hash
 if ( hash_equals($hash, crypt($password, $hash)) ) {
-  // Ok!
+	header("Location: task.php");
 }
-
+else{
+    header("Location: loginform.php");
+}
 
 $db->disconnect(); //always disconnect when finished.
 /**
@@ -27,10 +29,5 @@ $db->disconnect(); //always disconnect when finished.
  * Date: 4/23/2017
  * Time: 3:54 PM
  */
-if($_REQUEST['username'] == "infs" && $_REQUEST["password"] == "3202") {
-    header("Location: task.php");
-}
-else{
-    header("Location: loginform.php");
-}
+
 ?>

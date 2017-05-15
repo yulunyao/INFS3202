@@ -15,11 +15,11 @@
 			<div style="width: 100%;">
 				<div style="float:left;">
 					<img src="img/blue.png"></img>
-					<h2><a href="home.php"> Find Friends</a></h2>
+					<h2><a href="home.php">Find Friends</a></h2>
 				</div>
 				<div style="float:right;">
 					<img src="img/red.png"></img>
-					<h2><a href="location.php"> Go to Map</a></h2>
+					<h2><a href="location.php">Share Location</a></h2>
 				</div>
 			</div>
 			<div style="clear:both"></div>

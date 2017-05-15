@@ -38,4 +38,7 @@ if(!$result){
 
 $db->disconnect(); //always disconnect when finished.
 
+header("Location: loginform.php");
+
+
 ?>
