@@ -20,10 +20,10 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 	<p id="demo"></p>
 	
-	<div style="float:left; width: 50%; height = 100%">
+	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
-	<div style="float:right;">
+	<div style="width: 50%; height: 100%; float:right ">
 		<h3>You are now in the location:</h2>
 		<img src="img/blue.png"  width="50%" height="50%"></img>
 		<h2 id=addressA>Current Location String</h2>
@@ -101,7 +101,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 </div>
 
-<div id="footer">
+<div id="footer" style="position: fixed; bottom: 0">
             Designed By Team.
 </div>
 
