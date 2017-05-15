@@ -19,10 +19,10 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	<button onclick="getLocation()">Try It</button>
 
 	<p id="demo"></p>
-	<div id="googleMap" style="width:60%;height:400px;"></div>
-	<div style="width: 100%;">
-            <div style="float:left;">
-                
+	
+	<div style="width: 100%; height = 100%">
+            <div style="float:left; width: 50%; height = 100%">
+                <div id="googleMap" style="width:60%;height:400px;"></div>
             </div>
             <div style="float:right;">
 				<h3>You are now in the location:</h2>
