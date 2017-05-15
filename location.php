@@ -15,7 +15,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 <div id="googleMap" style="width:100%;height:400px;"></div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&callback=myMap"></script>
 
 
 <script>
@@ -44,7 +44,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		mapUpdate();
     }
 	
-	function initMap() {
+	function myMap() {
 		var mapProp= {
 			center:new google.maps.LatLng(lat,longi),
 			zoom:15,
