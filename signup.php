@@ -29,17 +29,11 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
 } else {
     $query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
     $result = mysqli_query($db->link, $query);
-    /*for ($i = 0; $i<3; $i++)
-    {
-        $a .= mt_rand(0,9);
-        echo "$a";
-    }*/
+
+    $value = rand(10000000,99999999); // generate 8-digit random number
+    $query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
+
+    $result = mysqli_query($db->link, $query);
 }
-
-$db->disconnect(); //always disconnect when finished.
-
-
-
 $db->disconnect();
-header("Location: loginform.php");
 ?>

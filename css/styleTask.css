@@ -1,3 +1,9 @@
+html {
+    background-image: url("../img/BCCFAEB8-F619-4F73-ADAF-F624D62705A2(Edited).jpg");
+    background-repeat: repeat-x;
+    background-size: 100%;
+}
+
 body {
     width: 80%;
     background-color: transparent;
