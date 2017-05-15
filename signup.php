@@ -36,5 +36,10 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     }*/
 }
 
+$db->disconnect(); //always disconnect when finished.
+
+
+
 $db->disconnect();
+header("Location: loginform.php");
 ?>
