@@ -14,12 +14,6 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 <div id="wrapper">
 	<div class="logo"><img src="img/SiKd.png" alt="Logo" width="70px" height="32px"></div>
 	
-	<p>Click the button to get your coordinates.</p>
-
-	<button onclick="getLocation()">Try It</button>
-
-	<p id="demo"></p>
-	
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
@@ -42,13 +36,17 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		var map;
 		var geocoder;
 		var infowindow;
+		
+		window.addEventListener("load", function(){
+			if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					x.innerHTML = "Geolocation is not supported by this browser.";
+				}
+		});;
 
 		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(showPosition);
-			} else {
-				x.innerHTML = "Geolocation is not supported by this browser.";
-			}
+			
 		}
 
 		function showPosition(position) {
@@ -101,7 +99,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 </div>
 
-<div id="footer" style="position: fixed; bottom: 0">
+<div id="footer" >
             Designed By Team.
 </div>
 
