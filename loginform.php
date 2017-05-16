@@ -25,6 +25,7 @@
                                     <label for="user" class="label">Email</label>
                                     <input id="email" type="text" class="input" name="username">
                                 </div>
+
                                 <div class="group">
                                     <label for="pass" class="label">Password</label>
                                     <input id="pass" type="password" class="input" data-type="password" name="password">
@@ -33,9 +34,11 @@
                                     <input id="check" type="checkbox" class="check" checked name="rem">
                                     <label for="check"><span class="icon"></span> Keep me Signed in</label>
                                 </div>
+
                                 <div class="group">
-                                    <input type="submit" class="button" value="Sign In" name="login">
+                                    <input type="submit" class="button" value="Sign In" name="login" onclick="ischeckemail();return false">
                                 </div>
+
                                 <div class="hr"></div>
                                 <div class="foot-lnk">
                                     <a href="#forgot">Forgot Password?</a>
@@ -46,7 +49,7 @@
                             <form method="$_POST" action="signup.php">
                                 <div class="group">
                                     <label for="user" class="label">Email</label>
-                                    <input id="user" type="text" class="input" name="username">
+                                    <input id="signup_email" type="text" class="input" name="username">
                                 </div>
                                 <div class="group">
                                     <label for="pass" class="label">Password</label>
@@ -61,8 +64,17 @@
                                     <input id="pass" type="text" class="input">
                                 </div>-->
                                 <div class="group">
-                                    <input type="submit" class="button" value="Sign Up">
+                                    <input type="submit" class="button" value="Sign Up" onclick="ischeckemail(); return false">
                                 </div>
+
+                                <!--<script type="text/javascript">
+                                    function ischeckemail(signup_email) {
+                                        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(signup_email)) {
+                                            alert("Email format incorrect!");
+                                        }
+                                    }
+                                </script>-->
+
                             </form>
                             <div class="hr"></div>
                             <div class="foot-lnk">
@@ -96,5 +108,14 @@ $db = new MySQLDatabase(); //create a Database object
 $db->connect("b622a8e03ec7ba", "6e32c3d6", "sik");
 
 ?>
+
+<!--<script type="text/javascript">
+    function ischeckemail(email) {
+        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(email)) {
+            alert("Email format incorrect!");
+        }
+    }
+</script>-->
+
 </body>
 </html>

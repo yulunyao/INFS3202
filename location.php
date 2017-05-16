@@ -1,7 +1,15 @@
 <?php
 session_start();
+$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
 echo "Welcome " . $_SESSION['username'];
-echo "<a href='logout.php'> logout</a>";
+$query = "SELECT random FROM signup WHERE username = '".$_SESSION['username']."'";
+$result = mysqli_query($con,$query);
+
+while($row = mysqli_fetch_assoc($result)) {
+    print_r(" with UID: ");
+    print_r($row["random"]);
+}
+echo "<a href='logout.php'> [logout]</a>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +28,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	<div class="logo"><img src="img/SiKd.png" alt="Logo" width="70px" height="32px"></div>
 	
 	<p id="demo"></p>
-	
+
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
@@ -50,7 +58,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				} else {
 					x.innerHTML = "Geolocation is not supported by this browser.";
 				}
-		});;
+		});
 
 		function getLocation() {
 			
