@@ -8,5 +8,6 @@
         setcookie('username', $username, time() - 1);
         setcookie('password', $password, time() - 1);
     }
-        echo "You have successfully logout. Clink <a href='loginform.php'>here</a> to login again."
+//        echo "You have successfully logout. Clink <a href='loginform.php'>here</a> to login again.";
+        header("Location: loginform.php");
 ?>
