@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 session_start();
 $con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
@@ -11,7 +12,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo "<a href='logout.php'> [logout]</a>";
 ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,15 +51,50 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		var map;
 		var geocoder;
 		var infowindow;
+		var mapFlag = false;
+		var intervalId = null;
+		var intervalCounter = 0;
 		
 		window.addEventListener("load", function(){
-			if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition, showError);
 				} else {
 					x.innerHTML = "Geolocation is not supported by this browser.";
 				}
 		});
 
+		function showError(error) {
+		  switch(error.code) {
+			case error.PERMISSION_DENIED:
+			  console.log("User denied the request for Geolocation.");
+			  break;
+			case error.POSITION_UNAVAILABLE:
+			  console.log("Location information is unavailable.");
+			  break;
+			case error.TIMEOUT:
+			  console.log("The request to get user location timed out.");
+			  break;
+			case error.UNKNOWN_ERROR:
+			  console.log("An unknown error occurred.");
+			  break;
+		  }
+		}
+		
+		function drawMapCallBack(error){
+			
+			intervalId = setInterval(function() {
+			   console.log("Called once\n");
+			   intervalCounter += 1;
+			  if (!mapFlag) {
+				
+				showPosition;
+			  }
+			  if(intervalCounter > 15){
+				  clearInterval(intervalId);
+			  }
+			}, 1000);
+		}
+		
 		function getLocation() {
 			
 		}
@@ -80,6 +115,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				zoom:15,
 			};
 			map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			mapFlag = true;
 			
 			geocoder = new google.maps.Geocoder;
 			infowindow = new google.maps.InfoWindow;
@@ -110,7 +146,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			
 		}
 		
-		//var json = https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
+		
 	</script>
 
 </div>
