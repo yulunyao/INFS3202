@@ -44,7 +44,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     } else {
         header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
         echo "<script>alert('$alert_message');</script>";
-    }*/
+    }
 } else {
     header("location: loginform.php");
 }
