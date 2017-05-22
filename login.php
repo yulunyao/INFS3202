@@ -35,11 +35,9 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     if (hash_equals($result, crypt($password, $result)) ) {
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
-            setcookie('password', $password, time()+60*60*7);
         }
         session_start();
         $_SESSION['username'] = $username;
-		$_SESSION['password'] = $password;
         header("location: task.php");
     } else {
         header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
@@ -51,11 +49,4 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 
 $dbO->disconnect();
 
-function debug_to_console( $data ) {
-    $output = $data;
-    if ( is_array( $output ) )
-        $output = implode( ',', $output);
-
-    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
-}
 ?>

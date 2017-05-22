@@ -24,7 +24,7 @@ $salt = sprintf("$2a$%02d$", $cost) . $salt;
 // $2a$10$eImiTXuWVxfM37uY4JANjQ==
 
 // Hash the password with the salt
-$password = crypt($$_REQUEST['password'], $salt);
+$password = crypt($_REQUEST['password'], $salt);
 
 $query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
 
