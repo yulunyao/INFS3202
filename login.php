@@ -18,14 +18,14 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     if ($conn -> connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT password FROM signup WHERE (username = '$username')";
+    $sql = "SELECT * FROM signup";
     $result = $conn->query($sql);
 	if (!$result){
 		die('Could not query:' . mysql_error());
 	}
 	$hash = mysql_result($result, 0);
 	//var_dump($username);
-	var_dump($hash);
+	var_dump($result);
 	
     /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
         if(isset($_REQUEST['rem'])) {
