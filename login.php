@@ -20,9 +20,12 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     }
     $sql = "SELECT password FROM signup WHERE (username = '$username')";
     $result = $conn->query($sql);
+	if (!$result){
+		die('Could not query:' . mysql_error());
+	}
 	$hash = mysql_result($result, 0);
-	var_dump($username);
-	//var_dump($result);
+	//var_dump($username);
+	var_dump($hash);
 	
     /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
         if(isset($_REQUEST['rem'])) {
