@@ -21,7 +21,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     $sql = "SELECT password FROM signup WHERE (username = '$username')";
     $result = $conn->query($sql);
 	$hash = mysql_result($result, 0);
-	
+	var_dump($username);
 	var_dump($result);
 	
     if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
