@@ -22,14 +22,14 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	$dbO = new MySQLDatabase(); //create a Database object
 	$dbO->connect("root", "", "sik");
 	
-    $sql = "SELECT * FROM signup WHERE username = '".$username."'";
-	$result = mysqli_query($dbO->link, $sql);
+    $sql = "SELECT password FROM signup WHERE username = '".$username."'";
+	$result = mysqli_query($dbO->link, $sql)->fetch_object()->password;
     //$result = $conn->query($sql);
 	if (!$result){
 		die('Could not query:' . mysql_error());
 	}
-	$hash = mysql_result($result, 0);
-	var_dump($hash);
+	//$hash = mysqli_result($result, 0);
+	//var_dump($hash);
 	var_dump($result);
 	
     /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
