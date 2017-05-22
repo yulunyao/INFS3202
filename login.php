@@ -28,8 +28,8 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	if (!$result){
 		die('Could not query:' . mysql_error());
 	}
-	//$hash = mysql_result($result, 0);
-	//var_dump($username);
+	$hash = mysql_result($result, 0);
+	var_dump($hash);
 	var_dump($result);
 	
     /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
