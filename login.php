@@ -22,7 +22,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     $result = $conn->query($sql);
 	$hash = mysql_result($result, 0);
 	
-    if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
+    if ($result -> num_rows > 0 && hash_equals($hash, $password) ) {
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
             setcookie('password', $password, time()+60*60*7);
