@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 session_start();
 $con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
@@ -11,7 +12,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 echo "<a href='logout.php'> [logout]</a>";
 ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
             <h3>You are now in the location:</h2>
             <img src="img/blue.png"  width="50%" height="50%"></img>
             <h2 id="addressA" name="address_detail"></h2>
-            <input type="submit" value="Send Location">
+            <input type="submit" value="Send Location" onclick="sendLocation()">
         </div>
     </form>
 
@@ -54,15 +54,50 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		var map;
 		var geocoder;
 		var infowindow;
+		var mapFlag = false;
+		var intervalId = null;
+		var intervalCounter = 0;
 		
 		window.addEventListener("load", function(){
-			if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition, showError);
 				} else {
 					x.innerHTML = "Geolocation is not supported by this browser.";
 				}
 		});
 
+		function showError(error) {
+		  switch(error.code) {
+			case error.PERMISSION_DENIED:
+			  console.log("User denied the request for Geolocation.");
+			  break;
+			case error.POSITION_UNAVAILABLE:
+			  console.log("Location information is unavailable.");
+			  break;
+			case error.TIMEOUT:
+			  console.log("The request to get user location timed out.");
+			  break;
+			case error.UNKNOWN_ERROR:
+			  console.log("An unknown error occurred.");
+			  break;
+		  }
+		}
+
+		function drawMapCallBack(error){
+			
+			intervalId = setInterval(function() {
+			   console.log("Called once\n");
+			   intervalCounter += 1;
+			  if (!mapFlag) {
+				
+				showPosition;
+			  }
+			  if(intervalCounter > 15){
+				  clearInterval(intervalId);
+			  }
+			}, 1000);
+		}
+		
 		function getLocation() {
 			
 		}
@@ -83,6 +118,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				zoom:15,
 			};
 			map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			mapFlag = true;
 			
 			geocoder = new google.maps.Geocoder;
 			infowindow = new google.maps.InfoWindow;
@@ -101,6 +137,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					map: map
 				  });
 				  var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
+				  console.log(address);
 				  //textString
 				  //infowindow.open(map, marker);
 				} else {
@@ -109,14 +146,39 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			  } else {
 				window.alert('Geocoder failed due to: ' + status);
 			  }
-			  var postv = $.post('location_sent.php', {variable:address});
-			  console.log(postv);
+
 			});
 
-			
+
 		}
 
-		//var json = https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
+        function sendLocation(){
+            var latlng = {lat: parseFloat(lat), lng: parseFloat(longi)};
+            geocoder.geocode({'location': latlng}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[1]) {
+                        map.setZoom(15);
+                        var marker = new google.maps.Marker({
+                            position: latlng,
+                            map: map
+                        });
+                        var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
+                        console.log(address);
+                        //textString
+                        //infowindow.open(map, marker);
+                    } else {
+                        window.alert('No results found');
+                    }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+
+                window.location.href = "location_sent.php?address=" + address;
+            });
+
+
+        }
+
 	</script>
 
 </div>
