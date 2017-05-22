@@ -13,8 +13,6 @@ session_start();
 if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
-	
-	crypt($password, $hash)
 
     $conn = new mysqli($servername, $dbuser, $dbpass, $db);
     if ($conn -> connect_error) {
