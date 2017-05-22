@@ -29,8 +29,8 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 		die('Could not query:' . mysql_error());
 	}
 	$hash = mysql_result($result, 0);
-	var_dump($hash);
-	var_dump($result);
+	debug_to_console($hash);
+	debug_to_console($result);
 	
     /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
         if(isset($_REQUEST['rem'])) {
@@ -50,4 +50,12 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 }
 
 $dbO->disconnect();
+
+function debug_to_console( $data ) {
+    $output = $data;
+    if ( is_array( $output ) )
+        $output = implode( ',', $output);
+
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}
 ?>
