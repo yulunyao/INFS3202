@@ -14,12 +14,17 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
 
-    $conn = new mysqli($servername, $dbuser, $dbpass, $db);
+    /*$conn = new mysqli($servername, $dbuser, $dbpass, $db);
     if ($conn -> connect_error) {
         die("Connection failed: " . $conn->connect_error);
-    }
+    }*/
+	include('connectMySQL.php'); //make sure the path is correct.
+	$dbO = new MySQLDatabase(); //create a Database object
+	$dbO->connect("root", "", "sik");
+	
     $sql = "SELECT * FROM signup";
-    $result = $conn->query($sql);
+	$result = mysqli_query($dbO->link, $sql);
+    //$result = $conn->query($sql);
 	if (!$result){
 		die('Could not query:' . mysql_error());
 	}
@@ -43,4 +48,6 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 } else {
     header("location: loginform.php");
 }
+
+$dbO->disconnect();
 ?>
