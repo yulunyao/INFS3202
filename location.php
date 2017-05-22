@@ -17,6 +17,7 @@ echo "<a href='logout.php'> [logout]</a>";
     <meta charset="UTF-8">
     <title>SiK</title>
     <link rel="stylesheet" type="text/css" href="css/styleTask.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
@@ -32,12 +33,14 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
-	<div id=right style="width: 50%; height: 100%; float:right ">
-		<h3>You are now in the location:</h2>
-		<img src="img/blue.png"  width="50%" height="50%"></img>
-		<h2 id=addressA></h2>
-		<button id=locationBtn>Send Location</button>
-	</div>
+    <form method="$_POST" action="location_sent.php">
+        <div id=right style="width: 50%; height: 100%; float:right ">
+            <h3>You are now in the location:</h2>
+            <img src="img/blue.png"  width="50%" height="50%"></img>
+            <h2 id="addressA" name="address_detail"></h2>
+            <input type="submit" value="Send Location" onclick="sendLocation()">
+        </div>
+    </form>
 
 	<p></p>
 
@@ -79,7 +82,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			  break;
 		  }
 		}
-		
+
 		function drawMapCallBack(error){
 			
 			intervalId = setInterval(function() {
@@ -133,7 +136,8 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					position: latlng,
 					map: map
 				  });
-				  document.getElementById("addressA").innerHTML = results[1].formatted_address;
+				  var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
+				  console.log(address);
 				  //textString
 				  //infowindow.open(map, marker);
 				} else {
@@ -142,15 +146,42 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			  } else {
 				window.alert('Geocoder failed due to: ' + status);
 			  }
+
 			});
-			
+
+
 		}
-		
-		
+
+        function sendLocation(){
+            var latlng = {lat: parseFloat(lat), lng: parseFloat(longi)};
+            geocoder.geocode({'location': latlng}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[1]) {
+                        map.setZoom(15);
+                        var marker = new google.maps.Marker({
+                            position: latlng,
+                            map: map
+                        });
+                        var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
+                        console.log(address);
+                        //textString
+                        //infowindow.open(map, marker);
+                    } else {
+                        window.alert('No results found');
+                    }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+
+                window.location.href = "location_sent.php?address=" + address;
+            });
+
+
+        }
+
 	</script>
 
 </div>
-
 <div id="footer" >
             Designed By Team.
 </div>

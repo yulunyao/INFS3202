@@ -23,7 +23,7 @@
                             <div class="sign-in-htm">
                                 <div class="group">
                                     <label for="user" class="label">Email</label>
-                                    <input id="email" type="text" class="input" name="username">
+                                    <input required="required" id="email" type="email" class="input" name="username">
                                 </div>
 
                                 <div class="group">
@@ -49,15 +49,15 @@
                             <form method="$_POST" action="signup.php">
                                 <div class="group">
                                     <label for="user" class="label">Email</label>
-                                    <input id="signup_email" type="text" class="input" name="username">
+                                    <input required="required" id="signup_email" type="email" class="input" name="username">
                                 </div>
                                 <div class="group">
                                     <label for="pass" class="label">Password</label>
-                                    <input id="pass" type="password" class="input" data-type="password" name="password">
+                                    <input required="required" pattern=".{6}" required title="Minimum 6-digit password" id="pass" type="password" class="input" data-type="password" name="password">
                                 </div>
                                 <div class="group">
                                     <label for="pass" class="label">Repeat Password</label>
-                                    <input id="pass" type="password" class="input" data-type="password">
+                                    <input required="required" pattern=".{6}" required title="Minimum 6-digit password" id="pass" type="password" class="input" data-type="password">
                                 </div>
                                 <!--<div class="group">
                                     <label for="pass" class="label">Email Address</label>
@@ -66,14 +66,6 @@
                                 <div class="group">
                                     <input type="submit" class="button" value="Sign Up" onclick="ischeckemail(); return false">
                                 </div>
-
-                                <!--<script type="text/javascript">
-                                    function ischeckemail(signup_email) {
-                                        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(signup_email)) {
-                                            alert("Email format incorrect!");
-                                        }
-                                    }
-                                </script>-->
 
                             </form>
                             <div class="hr"></div>
@@ -108,14 +100,6 @@ $db = new MySQLDatabase(); //create a Database object
 $db->connect("b622a8e03ec7ba", "6e32c3d6", "sik");
 
 ?>
-
-<!--<script type="text/javascript">
-    function ischeckemail(email) {
-        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(email)) {
-            alert("Email format incorrect!");
-        }
-    }
-</script>-->
 
 </body>
 </html>
