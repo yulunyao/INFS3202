@@ -24,7 +24,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	var_dump($username);
 	var_dump($result);
 	
-    if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
+    /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
             setcookie('password', $password, time()+60*60*7);
@@ -36,7 +36,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     } else {
         header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
         echo "<script>alert('$alert_message');</script>";
-    }
+    }*/
 } else {
     header("location: loginform.php");
 }
