@@ -13,14 +13,17 @@ session_start();
 if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
+	
+	crypt($password, $hash)
 
     $conn = new mysqli($servername, $dbuser, $dbpass, $db);
     if ($conn -> connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM signup WHERE (username = '$username') AND (password = '$password')";
+    $sql = "SELECT * FROM signup WHERE (username = '$username')";
     $result = $conn->query($sql);
-    if ($result -> num_rows > 0) {
+	$hash = mysql_result($result, 0);
+    if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash))) {
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
             setcookie('password', $password, time()+60*60*7);

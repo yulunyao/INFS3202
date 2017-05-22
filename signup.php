@@ -11,20 +11,20 @@ $username = $_REQUEST['username'];
 
 //Added hashing for password
 
-+$cost = 5;
- +
- +// Create a random salt
- +$salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
- +
- +// Prefix information about the hash so PHP knows how to verify it later.
- +// "$2a$" means we're using the Blowfish algorithm. The following two digits are the cost parameter.
- +$salt = sprintf("$2a$%02d$", $cost) . $salt;
- +
- +// Value:
- +// $2a$10$eImiTXuWVxfM37uY4JANjQ==
- +
- +// Hash the password with the salt
- +$password = crypt($$_REQUEST['password'], $salt);
+$cost = 5;
+
+// Create a random salt
+$salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
+
+// Prefix information about the hash so PHP knows how to verify it later.
+// "$2a$" means we're using the Blowfish algorithm. The following two digits are the cost parameter.
+$salt = sprintf("$2a$%02d$", $cost) . $salt;
+
+// Value:
+// $2a$10$eImiTXuWVxfM37uY4JANjQ==
+
+// Hash the password with the salt
+$password = crypt($$_REQUEST['password'], $salt);
 
 $query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
 
