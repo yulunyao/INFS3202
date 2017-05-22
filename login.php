@@ -23,7 +23,6 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	$hash = mysql_result($result, 0);
 	
     if ($result -> num_rows > 0) {
-		echo "<script>alert('$hash');</script>";
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
             setcookie('password', $password, time()+60*60*7);
@@ -31,9 +30,8 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
         session_start();
         $_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
-        header("location: task.php");
+        header("location: task.php?hash='$hash'");
     } else {
-		echo "<script>alert('$hash');</script>";
         header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
         echo "<script>alert('$alert_message');</script>";
     }
