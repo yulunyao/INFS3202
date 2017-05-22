@@ -29,8 +29,8 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 		die('Could not query:' . mysql_error());
 	}
 	$hash = mysql_result($result, 0);
-	debug_to_console($hash);
-	debug_to_console($result);
+	var_dump($hash);
+	var_dump($result);
 	
     /*if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
         if(isset($_REQUEST['rem'])) {
