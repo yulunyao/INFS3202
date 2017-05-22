@@ -22,7 +22,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     }
     $sql = "SELECT * FROM signup WHERE (username = '$username')";
     $result = $conn->query($sql);
-    if ($result -> num_rows > 0)) {
+    if ($result -> num_rows > 0 && hash_equals($result, crypt($password, $result))) {
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
             setcookie('password', $password, time()+60*60*7);
