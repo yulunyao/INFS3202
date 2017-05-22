@@ -22,7 +22,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	$dbO = new MySQLDatabase(); //create a Database object
 	$dbO->connect("root", "", "sik");
 	
-    $sql = "SELECT * FROM *";
+    $sql = "SELECT * FROM signup WHERE username = '".$username."'";
 	$result = mysqli_query($dbO->link, $sql);
     //$result = $conn->query($sql);
 	if (!$result){
