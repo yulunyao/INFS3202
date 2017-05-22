@@ -17,6 +17,7 @@ echo "<a href='logout.php'> [logout]</a>";
     <meta charset="UTF-8">
     <title>SiK</title>
     <link rel="stylesheet" type="text/css" href="css/styleTask.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
@@ -32,12 +33,14 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
-	<div id=right style="width: 50%; height: 100%; float:right ">
-		<h3>You are now in the location:</h2>
-		<img src="img/blue.png"  width="50%" height="50%"></img>
-		<h2 id=addressA></h2>
-		<button id=locationBtn>Send Location</button>
-	</div>
+    <form method="$_POST" action="location_sent.php">
+        <div id=right style="width: 50%; height: 100%; float:right ">
+            <h3>You are now in the location:</h2>
+            <img src="img/blue.png"  width="50%" height="50%"></img>
+            <h2 id="addressA" name="address_detail"></h2>
+            <input type="submit" value="Send Location">
+        </div>
+    </form>
 
 	<p></p>
 
@@ -97,7 +100,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					position: latlng,
 					map: map
 				  });
-				  document.getElementById("addressA").innerHTML = results[1].formatted_address;
+				  var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
 				  //textString
 				  //infowindow.open(map, marker);
 				} else {
@@ -106,15 +109,17 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			  } else {
 				window.alert('Geocoder failed due to: ' + status);
 			  }
+			  var postv = $.post('location_sent.php', {variable:address});
+			  console.log(postv);
 			});
+
 			
 		}
-		
+
 		//var json = https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	</script>
 
 </div>
-
 <div id="footer" >
             Designed By Team.
 </div>

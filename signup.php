@@ -34,6 +34,7 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     $query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
 
     $result = mysqli_query($db->link, $query);
+    header("Refresh: 0; url=loginform.php");
 }
 $db->disconnect();
 ?>
