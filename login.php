@@ -18,11 +18,11 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
     if ($conn -> connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM signup WHERE (username = '$username')";
+    $sql = "SELECT password FROM signup WHERE (username = '$username')";
     $result = $conn->query($sql);
 	$hash = mysql_result($result, 0);
 	
-    if ($result -> num_rows > 0) {
+    if ($result -> num_rows > 0 && hash_equals($hash, crypt($password, $hash)) ) {
         if(isset($_REQUEST['rem'])) {
             setcookie('username', $username, time()+60*60*7);
             setcookie('password', $password, time()+60*60*7);
@@ -30,7 +30,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
         session_start();
         $_SESSION['username'] = $username;
 		$_SESSION['password'] = $password;
-        header("location: task.php?hash='$hash'");
+        header("location: task.php");
     } else {
         header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
         echo "<script>alert('$alert_message');</script>";
