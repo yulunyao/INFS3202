@@ -12,27 +12,31 @@ echo "Welcome " . $_SESSION['username'];
 $query = "SELECT random FROM signup WHERE username = '".$_SESSION['username']."'";
 $result = mysqli_query($con,$query);
 
+/*Show Welcome information with current username and UID.*/
 while($row = mysqli_fetch_assoc($result)) {
-    print_r(" with UID: ");
+    print_r(" with UID: ");    //call uid by using $_SESSION['uid']
     print_r($row["random"]);
 }
 echo "<a href='logout.php'> [logout]</a>";
+echo ("<p></p>");
+
+$uid = $_SESSION['uid'];
 
 $username = $_SESSION['username'];
-$uid = $_REQUEST['uid'];
-//Check if the uid already exist in database, if not return a meaningful message and direct user back to previous page.
+echo("<p></p>");
 
-$query = "SELECT location FROM signup WHERE random=$uid";
+/*Display the UID and the location correspond to that UID.*/
+
+$query = "SELECT location FROM signup WHERE random= $uid";
 $uid_location = mysqli_query($con, $query);
 
-if (!$query || mysqli_num_rows($query) == 0) {
-    echo("The UID is not exist!");
-} else {
-    while ($row = mysqli_fetch_assoc($uid_location)) {
-        print_r("Location is in: ");
-        print_r($row["location"]);
-    }
+while ($row = mysqli_fetch_assoc($uid_location)) {
+    print_r("Location is in: ");
+    print_r($row["location"]);
 }
+
+/*Show maps by searching the location name.*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

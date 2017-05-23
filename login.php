@@ -26,7 +26,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	$result = mysqli_query($dbO->link, $sql)->fetch_object()->password;
     //$result = $conn->query($sql);
 	if (!$result){
-		die('Could not query:' . mysql_error());
+		die('Could not query:' . mysqli_error());
 	}
 	//$hash = mysqli_result($result, 0);
 	//var_dump($hash);

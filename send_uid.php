@@ -28,7 +28,7 @@ echo "<a href='logout.php'> [logout]</a>";
 
 <div id="uid_container">
     <h2>ENTER UID:</h2>
-    <form method="$_POST" action="getlocation.php">
+    <form method="$_POST" action="uid_check.php">
         <input required="required" type="number" name="uid">
         <p></p>
         <input type="submit" value="Go And Find">

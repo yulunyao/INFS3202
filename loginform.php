@@ -36,7 +36,7 @@
                                 </div>
 
                                 <div class="group">
-                                    <input type="submit" class="button" value="Sign In" name="login" onclick="ischeckemail();return false">
+                                    <input type="submit" class="button" value="Sign In" name="login">
                                 </div>
 
                                 <div class="hr"></div>
@@ -64,7 +64,7 @@
                                     <input id="pass" type="text" class="input">
                                 </div>-->
                                 <div class="group">
-                                    <input type="submit" class="button" value="Sign Up" onclick="ischeckemail(); return false">
+                                    <input type="submit" class="button" value="Sign Up">
                                 </div>
 
                             </form>
