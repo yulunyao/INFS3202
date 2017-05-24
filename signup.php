@@ -30,7 +30,7 @@ $password = crypt($_REQUEST['password'], $salt);
 //$query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
 
 //Protected SQL
-$stmt = $db->prepare("SELECT username FROM signup WHERE username = ?");
+$stmt = $db->link->prepare("SELECT username FROM signup WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 //Get variables from query
@@ -61,7 +61,7 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     //$result = mysqli_query($db->link, $query);
 	
 	//Protected SQL
-	$stmt = $db->prepare("INSERT INTO signup (username, password) VALUES (?, ?)");
+	$stmt = $db->link->prepare("INSERT INTO signup (username, password) VALUES (?, ?)");
 	$stmt->bind_param("ss", $username, $password);
 	$stmt->execute();
 	//Close prepared statement
@@ -74,7 +74,7 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     //$result = mysqli_query($db->link, $query);
 	
 	//Protected SQL
-	$stmt = $db->prepare("INSERT INTO signup (username, password, random) VALUES (?,?,?)");
+	$stmt = $db->link->prepare("INSERT INTO signup (username, password, random) VALUES (?,?,?)");
 	$stmt->bind_param("sss", $username, $password, $value);
 	$stmt->execute();
 	//Close prepared statement
