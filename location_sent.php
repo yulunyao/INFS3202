@@ -7,7 +7,7 @@ echo "<a href='logout.php'> [logout]</a>";
 
 $address = $_GET["address"];
 
-$query = "UPDATE signup SET location='$address' WHERE username = '".$_SESSION['username']."'";
+$query = "UPDATE uid SET location='$address' WHERE username = '".$_SESSION['username']."'";
 $result=mysqli_query($con, $query);
 
 ?>

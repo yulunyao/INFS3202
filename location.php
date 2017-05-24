@@ -3,7 +3,7 @@
 session_start();
 $con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
 echo "Welcome " . $_SESSION['username'];
-$query = "SELECT random FROM signup WHERE username = '".$_SESSION['username']."'";
+$query = "SELECT random FROM uid WHERE username = '".$_SESSION['username']."'";
 $result = mysqli_query($con,$query);
 
 while($row = mysqli_fetch_assoc($result)) {
@@ -96,10 +96,6 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				  clearInterval(intervalId);
 			  }
 			}, 1000);
-		}
-		
-		function getLocation() {
-			
 		}
 
 		function showPosition(position) {

@@ -48,9 +48,11 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     $result = mysqli_query($db->link, $query);
 
     $value = rand(10000000,99999999); // generate 8-digit random number
-    $query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
+    $query_1 = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
+    $query_2 = "INSERT INTO uid (username, random) VALUES ('$username', '$value')";
 
-    $result = mysqli_query($db->link, $query);
+    $result_1 = mysqli_query($db->link, $query_1);
+    $result_2= mysqli_query($db->link, $query_2);
     header("Refresh: 0; url=loginform.php");
 }
 $db->disconnect();

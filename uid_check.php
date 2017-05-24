@@ -12,7 +12,7 @@ $uid = $_REQUEST['uid'];
 session_start();
 $_SESSION['uid'] = $uid;
 
-$query = "SELECT random FROM signup WHERE random = $uid";
+$query = "SELECT random FROM uid WHERE random = $uid";
 $uid_get = mysqli_query($con, $query);
 
 
