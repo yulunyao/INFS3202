@@ -27,7 +27,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	//$result = mysqli_query($dbO->link, $sql)->fetch_object()->password;
 	
 	//Protected SQL
-	$stmt = $dbO->prepare( "SELECT password FROM signup WHERE username = ?");
+	$stmt = $dbO->prepare("SELECT password FROM signup WHERE username = ?");
 	$stmt->bind_param("s", $username);
 	$stmt->execute();
 	//Get variables from query
