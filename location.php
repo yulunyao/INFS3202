@@ -36,7 +36,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
     <form method="$_POST" action="location_sent.php">
         <div id=right style="width: 50%; height: 100%; float:right ">
             <h3>You are now in the location:</h2>
-            <img src="img/blue.png"  width="50%" height="50%"></img>
+            <img src="img/blue.png" width="50%" height="50%" alt=""></img>
             <h2 id="addressA" name="address_detail"></h2>
             <input type="submit" value="Send Location" onclick="sendLocation()">
         </div>
