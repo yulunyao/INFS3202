@@ -26,8 +26,19 @@ $salt = sprintf("$2a$%02d$", $cost) . $salt;
 // Hash the password with the salt
 $password = crypt($_REQUEST['password'], $salt);
 
-$query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
+//SQL Unprotected
+//$query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
 
+//Protected SQL
+$stmt = $db->prepare("SELECT username FROM signup WHERE username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+//Get variables from query
+$stmt->bind_result($query_ck);
+//Fetch data
+$stmt->fetch();
+//Close prepared statement
+$stmt->close();
 if((strlen($username) < 3) AND (strlen($password) < 5)) {
 /*    $query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
     $result = mysqli_query($db->link, $query);
@@ -44,13 +55,30 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
 
 } else {
-    $query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
-    $result = mysqli_query($db->link, $query);
+	
+	//SQL Unprotected
+    //$query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
+    //$result = mysqli_query($db->link, $query);
+	
+	//Protected SQL
+	$stmt = $db->prepare("INSERT INTO signup (username, password) VALUES (?, ?)");
+	$stmt->bind_param("ss", $username, $password);
+	$stmt->execute();
+	//Close prepared statement
+	$stmt->close();
 
     $value = rand(10000000,99999999); // generate 8-digit random number
-    $query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
-
-    $result = mysqli_query($db->link, $query);
+	
+	//Unprotected SQL
+    //$query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
+    //$result = mysqli_query($db->link, $query);
+	
+	//Protected SQL
+	$stmt = $db->prepare("INSERT INTO signup (username, password, random) VALUES (?,?,?)");
+	$stmt->bind_param("sss", $username, $password, $value);
+	$stmt->execute();
+	//Close prepared statement
+	$stmt->close();
     header("Refresh: 0; url=loginform.php");
 }
 $db->disconnect();
