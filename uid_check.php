@@ -26,7 +26,7 @@ $stmt->bind_param("s", strval($uid));
 $stmt->execute();
 
 
-$result = $stmt->get_result();
+$stmt->store_result();
 // You may need this too...
 //$stmt->store_result( $result );
 
@@ -41,7 +41,7 @@ $result = $stmt->get_result();
 
 
 
-if($stmt->num_rows($result ) > 0) {
+if($stmt->num_rows() > 0) {
     header("location: getlocation.php");
 } else{
     header("Refresh: 0; url=send_uid.php"); //refresh page after alert msg.
