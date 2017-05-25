@@ -13,16 +13,17 @@ $stmt = $con->link->prepare("SELECT random FROM signup WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 //Get variables from query
-$stmt->bind_result($result);
+$stmt->bind_result($row);
 //Fetch data
-$stmt->fetch();
+//$stmt->fetch();
 //Close prepared statement
-$stmt->close();
 
-while($row = mysqli_fetch_assoc($result)) {
+
+while($stmt->fetch()) {
     print_r(" with UID: ");
-    print_r($row["random"]);
+    print_r($row);
 }
+$stmt->close();
 echo "<a href='logout.php'> [logout]</a>";
 ?>
 <!DOCTYPE html>

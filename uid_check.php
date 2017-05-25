@@ -19,20 +19,31 @@ $_SESSION['uid'] = $uid;
 
 //Protected SQL
 $stmt = $con->link->prepare("SELECT random FROM signup WHERE random = ?");
-$stmt->bind_param("s", $uid);
-$stmt->execute();
+$stmt->bind_param($result, "s", $uid);
+$stmt->execute($result);
+
+
+
+// You may need this too...
+$stmt->store_result( $result );
+
+//$row_cnt = mysqli_stmt_num_rows( $result );
+
+
 //Get variables from query
-$stmt->bind_result($uid_get);
+//$stmt->bind_result($uid_get);
 //Fetch data
-$stmt->fetch();
+//$stmt->fetch();
 //Close prepared statement
-$stmt->close();
 
 
-if(mysqli_num_rows($uid_get) > 0) {
+
+if(stmt->num_rows($result ) > 0) {
     header("location: getlocation.php");
 } else{
     header("Refresh: 0; url=send_uid.php"); //refresh page after alert msg.
     echo("<script>alert('The UID you have typed is not exist, please try again.');</script>");
 }
+
+$stmt->close();
 ?>
