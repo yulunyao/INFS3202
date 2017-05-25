@@ -10,7 +10,7 @@ include('connectMySQL.php'); //make sure the path is correct.
 //$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
 $db = new MySQLDatabase(); //create a Database object
 $con = $db->connect("root", "", "sik");
-$uid = $_POST['uid'];
+$uid = $_REQUEST['uid'];
 
 session_start();
 $_SESSION['uid'] = $uid;
