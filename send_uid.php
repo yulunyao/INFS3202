@@ -1,15 +1,34 @@
 <?php
 session_start();
-$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
-echo "Welcome " . $_SESSION['username'];
-$query = "SELECT random FROM uid WHERE username = '".$_SESSION['username']."'";
-$result = mysqli_query($con,$query);
-
-while($row = mysqli_fetch_assoc($result)) {
+include('connectMySQL.php'); //make sure the path is correct.
+//$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
+$db = new MySQLDatabase(); //create a Database object
+$con = $db->connect("root", "", "sik");
+$username = $_SESSION['username'];
+echo "Welcome " . $username;
+//Unprotected SQL
+//$query = "SELECT random FROM signup WHERE username = '".$_SESSION['username']."'";
+//$result = mysqli_query($con,$query);
+//Protected SQL
+$stmt = $db->link->prepare("SELECT random FROM uid WHERE username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+//Get variables from query
+//$stmt->bind_result($random);
+$result = $stmt->get_result();
+//$json = array();
+//Fetch data
+//$stmt->fetch();
+//Close prepared statement
+while($row = $result->fetch_assoc()) {
+    //$json = array('uid'=>$random):
+    //print_r(json_encode($json));
     print_r(" with UID: ");
     print_r($row["random"]);
 }
+$stmt->close();
 echo "<a href='logout.php'> [logout]</a>";
+$db->disconnect();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +55,9 @@ echo "<a href='logout.php'> [logout]</a>";
 </div>
 
 
-    <div id="footer">
-        Designed By Team.
-    </div>
+<div id="footer">
+    Designed By Team.
+</div>
 
 </body>
 </html>
