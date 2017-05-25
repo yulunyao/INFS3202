@@ -12,24 +12,26 @@ var_dump($username);
 //$result = mysqli_query($con,$query);
 
 //Protected SQL
-$stmt = $con->prepare("SELECT random FROM uid WHERE username = ?");
-$stmt->bind_param("s", $username);
-$stmt->execute();
+$stmt = $db->link->prepare("SELECT random FROM uid WHERE username = ?");
+//$stmt->bind_param("s", $username);
+//$stmt->execute();
 //Get variables from query
 //$stmt->bind_result($random);
-$result = $stmt->get_result();
+
+//$result = $stmt->get_result();
+
 //$json = array();
 //Fetch data
 //$stmt->fetch();
 //Close prepared statement
 
 
-while($row = $result->fetch_assoc()) {
+/*while($row = $result->fetch_assoc()) {
 	//$json = array('uid'=>$random):
 	//print_r(json_encode($json));
     print_r(" with UID: ");
     print_r($row["random"]);
-}
+}*/
 $stmt->close();
 echo "<a href='logout.php'> [logout]</a>";
 $db->disconnect();
