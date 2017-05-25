@@ -14,7 +14,7 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 //Get variables from query
 //$stmt->bind_result($random);
-$result $stmt->get_result();
+$result = $stmt->get_result();
 //$json = array();
 //Fetch data
 //$stmt->fetch();
