@@ -6,7 +6,6 @@ $db = new MySQLDatabase(); //create a Database object
 $con = $db->connect("root", "", "sik");
 $username = $_SESSION['username'];
 echo "Welcome " . $username;
-var_dump($username);
 
 //Unprotected SQL
 //$query = "SELECT random FROM signup WHERE username = '".$_SESSION['username']."'";
