@@ -22,7 +22,7 @@ $result = $stmt->get_result();
 
 
 while($row = $result->fetch_assoc()) {
-	$json = array('uid'=>$random):
+	//$json = array('uid'=>$random):
 	//print_r(json_encode($json));
     print_r(" with UID: ");
     print_r($row["random"]);
