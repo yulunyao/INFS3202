@@ -12,9 +12,21 @@ $uid = $_REQUEST['uid'];
 session_start();
 $_SESSION['uid'] = $uid;
 
-$query = "SELECT random FROM signup WHERE random = $uid";
-$uid_get = mysqli_query($con, $query);
+//Unprotected SQL
+//$query = "SELECT random FROM signup WHERE random = $uid";
+//$uid_get = mysqli_query($con, $query);
 
+
+//Protected SQL
+$stmt = $con->link->prepare("SELECT random FROM signup WHERE random = ?");
+$stmt->bind_param("s", $uid);
+$stmt->execute();
+//Get variables from query
+$stmt->bind_result($uid_get);
+//Fetch data
+$stmt->fetch();
+//Close prepared statement
+$stmt->close();
 
 
 if(mysqli_num_rows($uid_get) > 0) {
