@@ -22,7 +22,7 @@ $_SESSION['uid'] = $uid;
 
 //Protected SQL
 $stmt = $db->link->prepare("SELECT random FROM uid WHERE random = ?");
-$stmt->bind_param("s", $uid);
+$stmt->bind_param("s", strval($uid));
 $stmt->execute();
 
 
