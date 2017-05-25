@@ -9,26 +9,22 @@ echo "Welcome " . $username;
 //$result = mysqli_query($con,$query);
 
 //Protected SQL
-$stmt = $con->link->prepare("SELECT random FROM signup WHERE username = ?");
-
-
-
-
-// You may need this too...
-
-$stmt->bind_param($result,"s", $username);
-$stmt->execute($result);
-$stmt->store_result( $result );
+$stmt = $con->link->prepare("SELECT random FROM uid WHERE username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
 //Get variables from query
-//$stmt->bind_result($result);
+$stmt->bind_result($random);
+$json = array();
 //Fetch data
 //$stmt->fetch();
 //Close prepared statement
 
 
-while($row = mysqli_fetch_assoc($result)) {
-    print_r(" with UID: ");
-    print_r($row["random"]);
+while($stmt->fetch()) {
+	$json = array('uid'=>$random):
+	print_r(json_encode($json));
+    //print_r(" with UID: ");
+    //print_r($row["random"]);
 }
 $stmt->close();
 echo "<a href='logout.php'> [logout]</a>";

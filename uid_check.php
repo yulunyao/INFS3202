@@ -18,7 +18,7 @@ $_SESSION['uid'] = $uid;
 
 
 //Protected SQL
-$stmt = $con->link->prepare("SELECT random FROM signup WHERE random = ?");
+$stmt = $con->link->prepare("SELECT random FROM uid WHERE random = ?");
 $stmt->bind_param($result, "s", $uid);
 $stmt->execute($result);
 
