@@ -10,7 +10,7 @@ include('connectMySQL.php'); //make sure the path is correct.
 //$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
 $db = new MySQLDatabase(); //create a Database object
 $con = $db->connect("root", "", "sik");
-$uid = $_REQUEST['uid'];
+$uid = $_POST['uid'];
 
 session_start();
 $_SESSION['uid'] = $uid;
@@ -22,13 +22,13 @@ $_SESSION['uid'] = $uid;
 
 //Protected SQL
 $stmt = $db->link->prepare("SELECT random FROM uid WHERE random = ?");
-$stmt->bind_param($result, "s", $uid);
-$stmt->execute($result);
+$stmt->bind_param("s", $uid);
+$stmt->execute();
 
 
-
+$result = $stmt->get_result();
 // You may need this too...
-$stmt->store_result( $result );
+//$stmt->store_result( $result );
 
 //$row_cnt = mysqli_stmt_num_rows( $result );
 
