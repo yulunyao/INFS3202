@@ -10,18 +10,25 @@ echo "Welcome " . $username;
 
 //Protected SQL
 $stmt = $con->link->prepare("SELECT random FROM signup WHERE username = ?");
-$stmt->bind_param("s", $username);
-$stmt->execute();
+
+
+
+
+// You may need this too...
+
+$stmt->bind_param($result,"s", $username);
+$stmt->execute($result);
+$stmt->store_result( $result );
 //Get variables from query
-$stmt->bind_result($row);
+//$stmt->bind_result($result);
 //Fetch data
 //$stmt->fetch();
 //Close prepared statement
 
 
-while($stmt->fetch()) {
+while($row = mysqli_fetch_assoc($result)) {
     print_r(" with UID: ");
-    print_r($row);
+    print_r($row["random"]);
 }
 $stmt->close();
 echo "<a href='logout.php'> [logout]</a>";
