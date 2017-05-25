@@ -9,7 +9,7 @@ echo "Welcome " . $username;
 //$result = mysqli_query($con,$query);
 
 //Protected SQL
-$stmt = $con->link->prepare("SELECT random FROM uid WHERE username = ?");
+$stmt = $con->prepare("SELECT random FROM uid WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 //Get variables from query
