@@ -74,7 +74,7 @@ if((strlen($username) < 3) AND (strlen($password) < 5)) {
     //$result = mysqli_query($db->link, $query);
 	
 	//Protected SQL
-	$stmt = $db->link->prepare("INSERT INTO UID (username, uid, location) VALUES (?,?,'PlaceHolder')");
+	$stmt = $db->link->prepare("INSERT INTO uid (username, random, location) VALUES (?,?,'PlaceHolder')");
 	$stmt->bind_param("ss", $username, $value);
 	$stmt->execute();
 	//Close prepared statement
