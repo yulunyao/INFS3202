@@ -3,8 +3,9 @@ session_start();
 //$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
 $db = new MySQLDatabase(); //create a Database object
 $con = $db->connect("root", "", "sik");
-$username = $_SESSION['username']
-echo "Welcome " . $username;
+$username = "a@s.m";
+//$_SESSION['username']
+//echo "Welcome " . $username;
 var_dump($username);
 
 //Unprotected SQL
