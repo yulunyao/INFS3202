@@ -13,18 +13,19 @@ $stmt = $con->link->prepare("SELECT random FROM uid WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 //Get variables from query
-$stmt->bind_result($random);
-$json = array();
+//$stmt->bind_result($random);
+$result $stmt->get_result();
+//$json = array();
 //Fetch data
 //$stmt->fetch();
 //Close prepared statement
 
 
-while($stmt->fetch()) {
+while($row = $result->fetch_assoc()) {
 	$json = array('uid'=>$random):
-	print_r(json_encode($json));
-    //print_r(" with UID: ");
-    //print_r($row["random"]);
+	//print_r(json_encode($json));
+    print_r(" with UID: ");
+    print_r($row["random"]);
 }
 $stmt->close();
 echo "<a href='logout.php'> [logout]</a>";
