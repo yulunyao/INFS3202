@@ -22,8 +22,20 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	$dbO = new MySQLDatabase(); //create a Database object
 	$dbO->connect("root", "", "sik");
 	
-    $sql = "SELECT password FROM signup WHERE username = '".$username."'";
-	$result = mysqli_query($dbO->link, $sql)->fetch_object()->password;
+	//Unprotected SQL
+    //$sql = "SELECT password FROM signup WHERE username = '".$username."'";
+	//$result = mysqli_query($dbO->link, $sql)->fetch_object()->password;
+	
+	//Protected SQL
+	$stmt = $dbO->link->prepare("SELECT password FROM signup WHERE username = ?");
+	$stmt->bind_param("s", $username);
+	$stmt->execute();
+	//Get variables from query
+	$stmt->bind_result($result);
+	//Fetch data
+	$stmt->fetch();
+	//Close prepared statement
+	$stmt->close();
     //$result = $conn->query($sql);
 	if (!$result){
 		die('Could not query:' . mysqli_error());

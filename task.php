@@ -29,11 +29,11 @@
     <div class="mainArea">
         <div style="width: 100%;">
             <div style="float:left;">
-                <img src="img/red.png"></img>
+                <img src="img/red.png" alt=""></img>
                 <h2><a href="send_uid.php"> Find Friends</a></h2>
             </div>
             <div style="float:right;">
-                <img src="img/blue.png"></img>
+                <img src="img/blue.png" alt=""></img>
                 <h2><a href="location.php"> Send Your Location</a></h2>
             </div>
         </div>
