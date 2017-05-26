@@ -33,11 +33,31 @@
       <file leaf-file-name="location.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/location.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-578">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="-306">
+              <caret line="124" column="29" lean-forward="true" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
               <folding>
                 <marker date="1495640634608" expanded="true" signature="192:259" ph="SELECT rando... signup" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_map.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_map.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_map.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_map.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="95" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,35 +93,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_map.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_map.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logout.php">
+      <file leaf-file-name="task.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="42" />
+              <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
               <folding>
-                <marker date="1495640634507" expanded="true" signature="266:350" ph="..." />
-                <marker date="1495640634507" expanded="true" signature="1171:1217" ph="..." />
-                <marker date="1495640634507" expanded="true" signature="1398:1469" ph="..." />
+                <marker date="1495640634511" expanded="true" signature="192:221" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="192:231" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="192:232" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="192:233" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="192:235" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="192:245" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="192:259" ph="SELECT rando... signup" />
+                <marker date="1495640634511" expanded="true" signature="512:531" ph="..." />
+                <marker date="1495640634511" expanded="true" signature="647:657" ph="..." />
               </folding>
             </state>
           </provider>
@@ -110,8 +116,8 @@
       <file leaf-file-name="send_uid.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/send_uid.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1495719729763" expanded="true" signature="533:574" ph="SELECT rando... uid" />
               </folding>
@@ -119,25 +125,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getlocation.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getlocation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getlocation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="731">
+              <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
               <folding>
-                <marker date="1495719688738" expanded="true" signature="287:354" ph="SELECT rando... signup" />
-                <marker date="1495719688738" expanded="true" signature="811:842" ph="SELECT locat... signup" />
-                <marker date="1495719688738" expanded="true" signature="811:849" ph="SELECT locat... signup" />
-                <marker date="1495719688738" expanded="true" signature="811:850" ph="SELECT locat... signup" />
+                <marker date="1495766241075" expanded="true" signature="287:354" ph="SELECT rando... signup" />
+                <marker date="1495766241075" expanded="true" signature="814:845" ph="SELECT locat... signup" />
+                <marker date="1495766241075" expanded="true" signature="814:852" ph="SELECT locat... signup" />
+                <marker date="1495766241075" expanded="true" signature="814:853" ph="SELECT locat... signup" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uid_check.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uid_check.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uid_check.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="510">
               <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
@@ -174,14 +180,15 @@
         <option value="$PROJECT_DIR$/connectMySQL.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/loginform.php" />
-        <option value="$PROJECT_DIR$/test_map.html" />
         <option value="$PROJECT_DIR$/task.php" />
         <option value="$PROJECT_DIR$/location.php" />
         <option value="$PROJECT_DIR$/location_sent.php" />
-        <option value="$PROJECT_DIR$/getlocation.php" />
         <option value="$PROJECT_DIR$/send_uid.php" />
         <option value="$PROJECT_DIR$/signup.php" />
         <option value="$PROJECT_DIR$/uid_check.php" />
+        <option value="$PROJECT_DIR$/test_map.html" />
+        <option value="$PROJECT_DIR$/test_map.php" />
+        <option value="$PROJECT_DIR$/getlocation.php" />
       </list>
     </option>
   </component>
@@ -450,12 +457,12 @@
       <workItem from="1495250567217" duration="20849000" />
       <workItem from="1495432107269" duration="27446000" />
       <workItem from="1495577719311" duration="7786000" />
-      <workItem from="1495637939910" duration="5958000" />
+      <workItem from="1495637939910" duration="14108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194405000" />
+    <option name="totallyTimeSpent" value="202555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
@@ -494,18 +501,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <marker date="1495719761712" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
-            <marker date="1495719761712" expanded="true" signature="2074:2127" ph="INSERT INTO signup... " />
-            <marker date="1495719761712" expanded="true" signature="2562:2622" ph="INSERT INTO uid... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginform.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -772,32 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <marker date="1495640634511" expanded="true" signature="192:221" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="192:231" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="192:232" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="192:233" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="192:235" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="192:245" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="192:259" ph="SELECT rando... signup" />
-            <marker date="1495640634511" expanded="true" signature="512:531" ph="..." />
-            <marker date="1495640634511" expanded="true" signature="647:657" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -818,19 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getlocation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <marker date="1495719688738" expanded="true" signature="287:354" ph="SELECT rando... signup" />
-            <marker date="1495719688738" expanded="true" signature="811:842" ph="SELECT locat... signup" />
-            <marker date="1495719688738" expanded="true" signature="811:849" ph="SELECT locat... signup" />
-            <marker date="1495719688738" expanded="true" signature="811:850" ph="SELECT locat... signup" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginform.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -844,13 +800,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="68" column="2" lean-forward="false" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
+          <folding>
+            <marker date="1495719761712" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
+            <marker date="1495719761712" expanded="true" signature="2074:2127" ph="INSERT INTO signup... " />
+            <marker date="1495719761712" expanded="true" signature="2562:2622" ph="INSERT INTO uid... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <marker date="1495640634511" expanded="true" signature="192:221" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="192:231" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="192:232" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="192:233" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="192:235" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="192:245" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="192:259" ph="SELECT rando... signup" />
+            <marker date="1495640634511" expanded="true" signature="512:531" ph="..." />
+            <marker date="1495640634511" expanded="true" signature="647:657" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/location.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="-306">
+          <caret line="124" column="29" lean-forward="true" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
           <folding>
             <marker date="1495640634608" expanded="true" signature="192:259" ph="SELECT rando... signup" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_uid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495719729763" expanded="true" signature="533:574" ph="SELECT rando... uid" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,35 +873,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_uid.php">
+    <entry file="file://$PROJECT_DIR$/test_map.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding>
-            <marker date="1495719729763" expanded="true" signature="533:574" ph="SELECT rando... uid" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="68" column="2" lean-forward="false" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
-          <folding>
-            <marker date="1495719761712" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
-            <marker date="1495719761712" expanded="true" signature="2074:2127" ph="INSERT INTO signup... " />
-            <marker date="1495719761712" expanded="true" signature="2562:2622" ph="INSERT INTO uid... " />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="95" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uid_check.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="510">
           <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
             <marker date="1495719785954" expanded="true" signature="579:618" ph="SELECT rando... uid" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getlocation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+          <folding>
+            <marker date="1495766241075" expanded="true" signature="287:354" ph="SELECT rando... signup" />
+            <marker date="1495766241075" expanded="true" signature="814:845" ph="SELECT locat... signup" />
+            <marker date="1495766241075" expanded="true" signature="814:852" ph="SELECT locat... signup" />
+            <marker date="1495766241075" expanded="true" signature="814:853" ph="SELECT locat... signup" />
           </folding>
         </state>
       </provider>
