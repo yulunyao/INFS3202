@@ -34,15 +34,11 @@
                                     <input id="check" type="checkbox" class="check" checked name="rem">
                                     <label for="check"><span class="icon"></span> Keep me Signed in</label>
                                 </div>
-
                                 <div class="group">
                                     <input type="submit" class="button" value="Sign In" name="login">
                                 </div>
 
                                 <div class="hr"></div>
-                                <div class="foot-lnk">
-                                    <a href="#forgot">Forgot Password?</a>
-                                </div>
                             </div>
                         </form>
                         <div class="sign-up-htm">

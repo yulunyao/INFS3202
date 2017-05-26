@@ -48,7 +48,7 @@ $db->disconnect();
 <div id="uid_container">
     <h2>ENTER UID:</h2>
     <form method="$_POST" action="uid_check.php">
-        <input required="required" type="number" name="uid">
+        <input required="required" type="number" name="uid" placeholder="8-digit number">
         <p></p>
         <input type="submit" value="Go And Find">
     </form>
