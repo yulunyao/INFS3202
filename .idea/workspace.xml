@@ -15,21 +15,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginform.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginform.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="42" column="54" lean-forward="false" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
-              <folding>
-                <marker date="1495538282530" expanded="true" signature="38:57" ph="..." />
-                <marker date="1495538282530" expanded="true" signature="169:178" ph="..." />
-                <marker date="1495538282530" expanded="true" signature="4554:4555" ph="..." />
-                <marker date="1495538282530" expanded="true" signature="4554:4701" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="location.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/location.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,17 +110,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getlocation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getlocation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getlocation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+            <state relative-caret-position="1445">
+              <caret line="114" column="33" lean-forward="false" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
               <folding>
-                <marker date="1495766241075" expanded="true" signature="287:354" ph="SELECT rando... signup" />
-                <marker date="1495766241075" expanded="true" signature="814:845" ph="SELECT locat... signup" />
-                <marker date="1495766241075" expanded="true" signature="814:852" ph="SELECT locat... signup" />
-                <marker date="1495766241075" expanded="true" signature="814:853" ph="SELECT locat... signup" />
+                <marker date="1495767337193" expanded="true" signature="287:354" ph="SELECT rando... signup" />
+                <marker date="1495767337193" expanded="true" signature="814:845" ph="SELECT locat... signup" />
+                <marker date="1495767337193" expanded="true" signature="814:852" ph="SELECT locat... signup" />
+                <marker date="1495767337193" expanded="true" signature="814:853" ph="SELECT locat... signup" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,7 +171,6 @@
         <option value="$PROJECT_DIR$/signup_success.php" />
         <option value="$PROJECT_DIR$/css/styleTask.css" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/connectMySQL.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/loginform.php" />
@@ -189,6 +183,7 @@
         <option value="$PROJECT_DIR$/test_map.html" />
         <option value="$PROJECT_DIR$/test_map.php" />
         <option value="$PROJECT_DIR$/getlocation.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -457,15 +452,15 @@
       <workItem from="1495250567217" duration="20849000" />
       <workItem from="1495432107269" duration="27446000" />
       <workItem from="1495577719311" duration="7786000" />
-      <workItem from="1495637939910" duration="14108000" />
+      <workItem from="1495637939910" duration="15309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202555000" />
+    <option name="totallyTimeSpent" value="203756000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
+    <frame x="-7" y="0" width="1378" height="775" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24669604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -727,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/useful_information/useful_infomation">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -894,14 +882,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getlocation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+        <state relative-caret-position="1445">
+          <caret line="114" column="33" lean-forward="false" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
           <folding>
-            <marker date="1495766241075" expanded="true" signature="287:354" ph="SELECT rando... signup" />
-            <marker date="1495766241075" expanded="true" signature="814:845" ph="SELECT locat... signup" />
-            <marker date="1495766241075" expanded="true" signature="814:852" ph="SELECT locat... signup" />
-            <marker date="1495766241075" expanded="true" signature="814:853" ph="SELECT locat... signup" />
+            <marker date="1495767337193" expanded="true" signature="287:354" ph="SELECT rando... signup" />
+            <marker date="1495767337193" expanded="true" signature="814:845" ph="SELECT locat... signup" />
+            <marker date="1495767337193" expanded="true" signature="814:852" ph="SELECT locat... signup" />
+            <marker date="1495767337193" expanded="true" signature="814:853" ph="SELECT locat... signup" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

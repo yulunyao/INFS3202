@@ -11,6 +11,16 @@ body {
     border-top: 3px solid #F40000;
 }
 
+h3{
+    text-align: center;
+    margin-top:1%;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    border-radius:1em;
+    border: 1px solid white;
+    background-color: white;
+}
+
 #home_container{
     width: 100%;
 }

@@ -59,13 +59,6 @@ $row2 = mysqli_fetch_assoc($uid_location);
         #map {
             height: 100%;
         }
-
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
     </style>
 </head>
 <div id="map" onload="initMap()"></div>
@@ -118,5 +111,10 @@ $row2 = mysqli_fetch_assoc($uid_location);
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPUyIe6inWNIdtAXaopnp5cVbBGgT2CzE">
 </script>
+
+<h3>Your friends is in location: <?php
+    printf($row2["location"]);
+    ?></h3>
+
 </body>
 </html>
