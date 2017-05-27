@@ -37,16 +37,17 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password'])) {
 	//Close prepared statement
 	$stmt->close();
     //$result = $conn->query($sql);
-	if (!$result){
-		die('Could not query:' . mysqli_error());
-	}
-	//$hash = mysqli_result($result, 0);
-	//var_dump($hash);
-	//var_dump($result);
-	
-    if (hash_equals($result, crypt($password, $result)) ) {
-        if(isset($_REQUEST['rem'])) {
-            setcookie('username', $username, time()+60*60*7);
+    if (!$result) {
+        header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
+        echo "<script>alert('$alert_message');</script>";
+    } elseif (
+        //$hash = mysqli_result($result, 0);
+        //var_dump($hash);
+        //var_dump($result);
+    hash_equals($result, crypt($password, $result))
+    ) {
+        if (isset($_REQUEST['rem'])) {
+            setcookie('username', $username, time() + 60 * 60 * 7);
         }
         session_start();
         $_SESSION['username'] = $username;
