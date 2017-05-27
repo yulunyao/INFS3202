@@ -36,6 +36,7 @@ $db->disconnect();
     <meta charset="UTF-8">
     <title>SiK</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -47,10 +48,13 @@ $db->disconnect();
 
 <div id="uid_container">
     <h2>ENTER UID:</h2>
-    <form method="$_POST" action="uid_check.php">
-        <input required="required" type="number" name="uid" placeholder="8-digit number">
+    <form id="submit_form" name="aform" onsubmit="return false">
+        <input required="required" id="uid" type="number" name="uid" placeholder="Enter 8-digit number">
         <p></p>
-        <input type="submit" value="Go And Find">
+        <span id="success_message" class="text-success"></span>
+        <span id="error_message" class="text-danger"></span>
+        <p></p>
+        <input type="button" id='submit_uid' value="Go And Find" onsubmit="false">
     </form>
 </div>
 
@@ -60,4 +64,44 @@ $db->disconnect();
 </div>
 
 </body>
+
+<script>
+    $(document).ready(function () {
+        $('#submit_uid').click(function () {
+            var uid = $('#uid').val();
+            console.log(uid);
+            if(uid == '')
+            {
+                $('#error_message').html("UID Required, please enter.");
+            }
+            else
+                {
+                    $('#error_message').html("");
+                    $.ajax({
+                        url:'uid_check.php',
+                        method:"GET",
+                        data:{uid:uid},
+                        success:function(data){
+                            if(data === 'getlocation.php') { //check if tee
+                                window.location = data;
+                            } else {
+                                $("form").trigger("reset");
+                                $('#success_message').fadeIn().html(data);
+                            }
+
+                    }
+                    })
+                }
+        })
+    })
+</script>
+
+<script>
+    $('.input').keypress(function (e) {
+        if (e.which == 13) {
+            $('form#submit_uid').submit();
+            return false;    //<---- Add this line
+        }
+    });
+</script>
 </html>

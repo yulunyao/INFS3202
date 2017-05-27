@@ -66,7 +66,7 @@
                             </form>
                             <div class="hr"></div>
                             <div class="foot-lnk">
-                                <label for="tab-1">Already Member?</a>
+                                <label for="tab-1">Already Member?</label>
                             </div>
                         </div>
                     </div>

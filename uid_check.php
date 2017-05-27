@@ -10,7 +10,7 @@ include('connectMySQL.php'); //make sure the path is correct.
 //$con = mysqli_connect('au-cdbr-azure-east-a.cloudapp.net:3306', "b622a8e03ec7ba", "6e32c3d6", "sik");
 $db = new MySQLDatabase(); //create a Database object
 $con = $db->connect("root", "", "sik");
-$uid = $_REQUEST['uid'];
+$uid = $_GET['uid'];
 session_start();
 $_SESSION['uid'] = $uid;
 //Unprotected SQL
@@ -30,10 +30,9 @@ $stmt->store_result();
 //$stmt->fetch();
 //Close prepared statement
 if($stmt->num_rows() > 0) {
-    header("location: getlocation.php");
-} else{
-    header("Refresh: 0; url=send_uid.php"); //refresh page after alert msg.
-    echo("<script>alert('The UID you have typed is not exist, please try again.');</script>");
+    echo('getlocation.php');
+} else {
+    echo('The UID is not exist, please try another one');
 }
 $stmt->close();
 $db->disconnect();
