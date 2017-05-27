@@ -117,4 +117,7 @@ $row2 = mysqli_fetch_assoc($uid_location);
     ?></h3>
 
 </body>
+<div id="footer" >
+    Designed By Team.
+</div>
 </html>
