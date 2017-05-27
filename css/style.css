@@ -1,7 +1,11 @@
 html {
-    background-image: url("../img/BCCFAEB8-F619-4F73-ADAF-F624D62705A2(Edited).jpg");
-    background-repeat: repeat-x;
-    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url(https://static.pexels.com/photos/26135/pexels-photo-26135.jpg) no-repeat 50% 50%;
+    display: table;;
+    top: 0;
+    background-size: cover;
 }
 
 body {
