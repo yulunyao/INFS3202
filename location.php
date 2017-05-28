@@ -62,7 +62,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		
 		window.addEventListener("load", function(){
 				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition, showError, {
+					navigator.geolocation.watchPosition(showPosition, showError, {
 						 enableHighAccuracy: true
 							  ,timeout : 15000, maximumAge: 3000
 					});
