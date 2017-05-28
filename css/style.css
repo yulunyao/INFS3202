@@ -1,18 +1,19 @@
 html {
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
-    margin: auto;
-    background: url(https://static.pexels.com/photos/26135/pexels-photo-26135.jpg);/* no-repeat 50% 50%;*/
-    /*display: table; /*google maps cannot display by using this, may try other.*/
-    top: 0;
-    background-size: cover;
+    background-position: middle;
 }
 
 body {
-    width: 80%;
-    background-color: transparent;
+    height: 100%;
+    width: 100%;
     margin: auto;
-    border-top: 3px solid #F40000;
+    background: url(https://static.pexels.com/photos/26135/pexels-photo-26135.jpg) no-repeat 50% 50%;
+    display: table;;
+    top: 0;
+    background-size: cover;
 }
 
 h3{
@@ -62,9 +63,8 @@ h6 {
 }
 
 .loginform {
-    padding: 70px;
-    margin: auto;
-    /*border: 2px black solid;*/
+    vertical-align: middle;
+    padding-top: 5%;
     background-color: transparent;
 }
 
