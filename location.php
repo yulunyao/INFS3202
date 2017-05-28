@@ -69,6 +69,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		});
 
 		function showError(error) {
+			x.innerHTML = error;
 		  switch(error.code) {
 			case error.PERMISSION_DENIED:
 			  console.log("User denied the request for Geolocation.");
