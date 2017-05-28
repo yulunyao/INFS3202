@@ -87,6 +87,9 @@ $db->disconnect();
                             } else {
                                 $("form").trigger("reset");
                                 $('#success_message').fadeIn().html(data);
+                                setTimeout(function () {
+                                    $('#success_message').fadeOut('slow');
+                                },1000);
                             }
 
                     }
