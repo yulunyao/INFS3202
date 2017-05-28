@@ -16,27 +16,43 @@ $salt = sprintf("$2a$%02d$", $cost) . $salt;
 // $2a$10$eImiTXuWVxfM37uY4JANjQ==
 // Hash the password with the salt
 $password = crypt($_REQUEST['password'], $salt);
-$query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
-if((strlen($username) < 3) AND (strlen($password) < 5)) {
-    /*    $query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
-        $result = mysqli_query($db->link, $query);
-        if (!$result) {
-            die(mysqli_error());
-        }*/
-    echo"<script type='text/javascript'>alert('$alert_message_1')</script>";
+//SQL Unprotected
+//$query_ck = mysqli_query($db->link, "SELECT username FROM signup WHERE username = '$username'");
+//Protected SQL
+$stmt = $db->link->prepare("SELECT username FROM signup WHERE username = ?");
+$stmt->bind_param("s", $username); //Binds variables to a prepared statement as parameters
+$stmt->execute();
+//Get variables from query
+$stmt->bind_result($query_ck);
+mysqli_stmt_execute($stmt);
+mysqli_stmt_store_result($stmt);
+//Close prepared statement
+$stmt->fetch();
+if (mysqli_stmt_num_rows($stmt) != 0) {
+    echo "<script type= 'text/javascript'>alert('$alert_message_2')</script>";
     header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
-} elseif (mysqli_num_rows($query_ck) != 0) {
-    echo"<script type= 'text/javascript'>alert('$alert_message_2')</script>";
-    header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
+    $stmt->close();
 } else {
-    $query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
-    $result = mysqli_query($db->link, $query);
-    $value = rand(10000000,99999999); // generate 8-digit random number
-    $query_1 = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
-    $query_2 = "INSERT INTO uid (username, random) VALUES ('$username', '$value')";
-    $result_1 = mysqli_query($db->link, $query_1);
-    $result_2= mysqli_query($db->link, $query_2);
-    header("Refresh: 0; url=loginform.php");
+    //SQL Unprotected
+    //$query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
+    //$result = mysqli_query($db->link, $query);
+    //Protected SQL
+    $stmt = $db->link->prepare("INSERT INTO signup (username, password) VALUES (?, ?)");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    //Close prepared statement
+    $stmt->close();
+    $value = rand(10000000, 99999999); // generate 8-digit random number
+    //Unprotected SQL
+    //$query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
+    //$result = mysqli_query($db->link, $query);
+    //Protected SQL
+    $stmt = $db->link->prepare("INSERT INTO uid (username, random, location) VALUES (?,?,'')");
+    $stmt->bind_param("ss", $username, $value);
+    $stmt->execute();
+    //Close prepared statement
+    $stmt->close();
+    header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
 }
 $db->disconnect();
 ?>

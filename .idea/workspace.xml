@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginform.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginform.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginform.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+            <state relative-caret-position="578">
+              <caret line="97" column="7" lean-forward="false" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
               <folding>
                 <marker date="1495978601064" expanded="true" signature="38:57" ph="..." />
                 <marker date="1495978601064" expanded="true" signature="4387:4534" ph="..." />
@@ -28,27 +28,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="signup.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signup.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
-              <caret line="41" column="2" lean-forward="false" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+              <caret line="57" column="2" lean-forward="false" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
               <folding>
-                <marker date="1495978924209" expanded="true" signature="863:919" ph="SELECT usern... signup" />
-                <marker date="1495978924209" expanded="true" signature="1574:1647" ph="INSERT INTO signup... " />
-                <marker date="1495978924209" expanded="true" signature="1785:1858" ph="INSERT INTO signup... " />
-                <marker date="1495978924209" expanded="true" signature="1877:1942" ph="INSERT INTO uid... " />
+                <marker date="1495985395620" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
+                <marker date="1495985395620" expanded="true" signature="1748:1801" ph="INSERT INTO signup... " />
+                <marker date="1495985395620" expanded="true" signature="2235:2295" ph="INSERT INTO uid... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectMySQL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connectMySQL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="109" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,8 +76,8 @@
         <option value="$PROJECT_DIR$/getlocation.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/send_uid.php" />
-        <option value="$PROJECT_DIR$/loginform.php" />
         <option value="$PROJECT_DIR$/signup.php" />
+        <option value="$PROJECT_DIR$/loginform.php" />
       </list>
     </option>
   </component>
@@ -369,12 +358,12 @@
       <workItem from="1495791397453" duration="796000" />
       <workItem from="1495865781130" duration="1142000" />
       <workItem from="1495883961571" duration="35045000" />
-      <workItem from="1495961556197" duration="12804000" />
+      <workItem from="1495961556197" duration="13965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254005000" />
+    <option name="totallyTimeSpent" value="255166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
@@ -429,10 +418,9 @@
         <state relative-caret-position="396">
           <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
           <folding>
-            <marker date="1495978924209" expanded="true" signature="863:919" ph="SELECT usern... signup" />
-            <marker date="1495978924209" expanded="true" signature="1574:1647" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1785:1858" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1877:1942" ph="INSERT INTO uid... " />
+            <marker date="1495985395620" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
+            <marker date="1495985395620" expanded="true" signature="1748:1801" ph="INSERT INTO signup... " />
+            <marker date="1495985395620" expanded="true" signature="2235:2295" ph="INSERT INTO uid... " />
           </folding>
         </state>
       </provider>
@@ -472,10 +460,9 @@
         <state relative-caret-position="418">
           <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
           <folding>
-            <marker date="1495978924209" expanded="true" signature="863:919" ph="SELECT usern... signup" />
-            <marker date="1495978924209" expanded="true" signature="1574:1647" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1785:1858" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1877:1942" ph="INSERT INTO uid... " />
+            <marker date="1495985395620" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
+            <marker date="1495985395620" expanded="true" signature="1748:1801" ph="INSERT INTO signup... " />
+            <marker date="1495985395620" expanded="true" signature="2235:2295" ph="INSERT INTO uid... " />
           </folding>
         </state>
       </provider>
@@ -515,10 +502,9 @@
         <state relative-caret-position="418">
           <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
           <folding>
-            <marker date="1495978924209" expanded="true" signature="863:919" ph="SELECT usern... signup" />
-            <marker date="1495978924209" expanded="true" signature="1574:1647" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1785:1858" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1877:1942" ph="INSERT INTO uid... " />
+            <marker date="1495985395620" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
+            <marker date="1495985395620" expanded="true" signature="1748:1801" ph="INSERT INTO signup... " />
+            <marker date="1495985395620" expanded="true" signature="2235:2295" ph="INSERT INTO uid... " />
           </folding>
         </state>
       </provider>
@@ -778,26 +764,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginform.php">
+    <entry file="file://$PROJECT_DIR$/signup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+        <state relative-caret-position="578">
+          <caret line="57" column="2" lean-forward="false" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
           <folding>
-            <marker date="1495978601064" expanded="true" signature="38:57" ph="..." />
-            <marker date="1495978601064" expanded="true" signature="4387:4534" ph="..." />
+            <marker date="1495985395620" expanded="true" signature="987:1033" ph="SELECT usern... signup" />
+            <marker date="1495985395620" expanded="true" signature="1748:1801" ph="INSERT INTO signup... " />
+            <marker date="1495985395620" expanded="true" signature="2235:2295" ph="INSERT INTO uid... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signup.php">
+    <entry file="file://$PROJECT_DIR$/loginform.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
-          <caret line="41" column="2" lean-forward="false" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+          <caret line="97" column="7" lean-forward="false" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
           <folding>
-            <marker date="1495978924209" expanded="true" signature="863:919" ph="SELECT usern... signup" />
-            <marker date="1495978924209" expanded="true" signature="1574:1647" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1785:1858" ph="INSERT INTO signup... " />
-            <marker date="1495978924209" expanded="true" signature="1877:1942" ph="INSERT INTO uid... " />
+            <marker date="1495978601064" expanded="true" signature="38:57" ph="..." />
+            <marker date="1495978601064" expanded="true" signature="4387:4534" ph="..." />
           </folding>
         </state>
       </provider>
