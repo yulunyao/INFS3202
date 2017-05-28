@@ -46,7 +46,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 
 	<p></p>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&sensor=true"></script>
 
 
 	<script>
@@ -64,7 +64,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 				if (navigator.geolocation) {
 					navigator.geolocation.getCurrentPosition(showPosition, showError, {
 						 enableHighAccuracy: true
-							  ,timeout : 15000
+							  ,timeout : 15000, maximumAge: 3000
 					});
 				} else {
 					x.innerHTML = "Geolocation is not supported by this browser.";
@@ -138,7 +138,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 					position: latlng,
 					map: map
 				  });
-				  var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
+				  var address = document.getElementById("addressA").innerHTML = results[0].formatted_address;
 				  console.log(address);
 				  //textString
 				  //infowindow.open(map, marker);
