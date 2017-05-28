@@ -48,7 +48,7 @@ $db->disconnect();
 
 <div id="uid_container">
     <h2>ENTER UID:</h2>
-    <form id="submit_form" name="aform" onsubmit="return false">
+    <form id="submit_form" onsubmit="return false">
         <input required="required" id="uid" type="number" name="uid" placeholder="Enter 8-digit number">
         <p></p>
         <span id="success_message" class="text-success"></span>
@@ -94,14 +94,5 @@ $db->disconnect();
                 }
         })
     })
-</script>
-
-<script>
-    $('.input').keypress(function (e) {
-        if (e.which == 13) {
-            $('form#submit_uid').submit();
-            return false;    //<---- Add this line
-        }
-    });
 </script>
 </html>

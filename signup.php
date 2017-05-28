@@ -24,23 +24,18 @@ $stmt->bind_param("s", $username); //Binds variables to a prepared statement as 
 $stmt->execute();
 //Get variables from query
 $stmt->bind_result($query_ck);
-
 mysqli_stmt_execute($stmt);
 mysqli_stmt_store_result($stmt);
 //Close prepared statement
 $stmt->fetch();
-
-
 if (mysqli_stmt_num_rows($stmt) != 0) {
     echo "<script type= 'text/javascript'>alert('$alert_message_2')</script>";
     header("Refresh: 0; url=loginform.php"); //refresh page after alert msg.
     $stmt->close();
 } else {
-
     //SQL Unprotected
     //$query = "INSERT INTO signup (username, password) VALUES ('$username', '$password')";
     //$result = mysqli_query($db->link, $query);
-
     //Protected SQL
     $stmt = $db->link->prepare("INSERT INTO signup (username, password) VALUES (?, ?)");
     $stmt->bind_param("ss", $username, $password);
@@ -48,11 +43,9 @@ if (mysqli_stmt_num_rows($stmt) != 0) {
     //Close prepared statement
     $stmt->close();
     $value = rand(10000000, 99999999); // generate 8-digit random number
-
     //Unprotected SQL
     //$query = "INSERT INTO signup (username, password, random) VALUES ('$username', '$password', '$value')";
     //$result = mysqli_query($db->link, $query);
-
     //Protected SQL
     $stmt = $db->link->prepare("INSERT INTO uid (username, random, location) VALUES (?,?,'')");
     $stmt->bind_param("ss", $username, $value);

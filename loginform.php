@@ -82,7 +82,6 @@
 
 <?php
 include("connectMySQL.php");
-
 if (isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
     $username = $_COOKIE['username'];
     $password = $_COOKIE['password'];
@@ -91,10 +90,8 @@ if (isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
              document.getElementById('pass').value = '$password';
     </script>";
 }
-
 $db = new MySQLDatabase(); //create a Database object
 $db->connect("b622a8e03ec7ba", "6e32c3d6", "sik");
-
 ?>
 
 </body>
