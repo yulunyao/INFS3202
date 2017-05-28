@@ -110,7 +110,6 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			longi = position.coords.longitude;
 			console.log(lat);
 			console.log(longi);
-			x.innerHTML = lat + "" + longi;
 			mapInit();
 		}
 		
