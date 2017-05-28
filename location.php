@@ -62,14 +62,16 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		
 		window.addEventListener("load", function(){
 				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition, showError);
+					navigator.geolocation.getCurrentPosition(showPosition, showError, {
+						 enableHighAccuracy: true
+							  ,timeout : 15000
+					});
 				} else {
 					x.innerHTML = "Geolocation is not supported by this browser.";
 				}
 		});
 
 		function showError(error) {
-			x.innerHTML = error;
 		  switch(error.code) {
 			case error.PERMISSION_DENIED:
 			  console.log("User denied the request for Geolocation.");
