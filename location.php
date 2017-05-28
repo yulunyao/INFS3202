@@ -62,7 +62,6 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 		
 		window.addEventListener("load", function(){
 				if (navigator.geolocation) {
-					x.innerHTML = "Debug mobile";
 					navigator.geolocation.getCurrentPosition(showPosition, showError);
 				} else {
 					x.innerHTML = "Geolocation is not supported by this browser.";
@@ -108,6 +107,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 			longi = position.coords.longitude;
 			console.log(lat);
 			console.log(longi);
+			x.innerHTML = lat + "" + longi;
 			mapInit();
 		}
 		
