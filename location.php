@@ -160,7 +160,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
                             position: latlng,
                             map: map
                         });
-                        var address = document.getElementById("addressA").innerHTML = results[1].formatted_address;
+                        var address = document.getElementById("addressA").innerHTML = results[0].formatted_address;
                         console.log(address);
                         //textString
                         //infowindow.open(map, marker);
