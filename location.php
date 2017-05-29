@@ -30,6 +30,7 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
 	
 	<p id="demo"></p>
 
+	<div>
 	<div style="width: 50%; height: 100%; float:left;">
 		<div id="googleMap" style="width:80%;height:400px;"></div>
 	</div>
@@ -41,9 +42,11 @@ AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0
             <img src="img/blue.png" width="50%" height="50%" alt=""></img>
             <h2 id="addressA" name="address_detail"></h2>
             <input type="submit" value="Send Location" onclick="sendLocation()">
+
         </div>
     </form>
-
+	<div style="clear:both"></div>
+	</div>
 	<p></p>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4jMSOZattisRWE3f96RaJcV5S9nQHr0&sensor=true"></script>
